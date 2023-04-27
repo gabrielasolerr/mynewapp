@@ -1,0 +1,28 @@
+<div class="containerHead">
+  <h1>TV Series</h1>
+</div>
+<div class="containerBody">
+  <table id="seriesTable" class="table table-bordered">
+      <thead class="thead-light">
+          <tr class="table-active">
+              <th>#</th>
+              <th>Name</th>
+              <th>Channel</th>
+              <th>Seasons</th>
+          </tr>
+      </thead>
+      <tbody id="series" *ngFor="let serie of series">
+        <tr>
+          <td><strong>{{serie.id}}</strong></td>
+          <td id="idSerie">{{serie.name}}</td>
+          <td>{{serie.channel}}</td>
+          <td>{{serie.seasons}}</td>
+        </tr>
+      </tbody>
+      <tfoot>
+          <tr>
+              <th colspan="4">Seasons average: {{average}}<h6 id = "average"></h6></th>
+          </tr>
+      </tfoot>
+  </table>
+</div>
