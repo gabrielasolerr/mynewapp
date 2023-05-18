@@ -16,6 +16,7 @@ export class SerieComponent implements OnInit {
   getSerieList() {
     this.serieService.getSeries().subscribe(series=> {
       this.series = series;
+      console.log(this.series);
       this.getAverageSeasons();
     })
   }
